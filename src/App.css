@@ -1,3 +1,5 @@
+
+
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
@@ -725,7 +727,70 @@ footer h2 {
   /* ... (other mobile-specific styles) */
 }
 
-@media only screen and (max-width: 1440px) {
+  
+@media only screen and (max-width: 1024px) {
+  /* Apply styles for screens up to 600 pixels wide (adjust as needed) */
+
+  header {
+    font-size: 14px;
+  }
+
+  .name-container0,
+  .name-container1,
+  .name-container2 {
+   
+  display: grid;
+  grid-template-columns: repeat(8,1fr) ;
+    margin-bottom:20px;
+  }
+  .name-container1 {
+    position: absolute;
+    top:180px;
+    left:610px;
+  }
+
+  .ellipse1 {
+    width: 80px; 
+    height: 80px; 
+    border-radius: 50%;
+    background: linear-gradient(135deg, #FFA500, #8B4513, #FFD700); 
+    position: absolute;
+    left:550px;
+    top:700px;
+  }
+  .ellipse2 {
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50%;
+    background-color: white; 
+    position: absolute;
+    left:575px;
+    top:725px;
+  }
+  
+  
+  
+  .half-circle2 {
+    width: 150px; /* Adjust the width as needed */
+    height: 150px; /* Adjust the height as needed (half of the width) */
+    background-color: white; 
+    border-radius: 50%; 
+    position: absolute;
+    left:640px;
+    top:410px; 
+  }
+  .half-circle1 {
+    width: 300px; /* Adjust the width as needed */
+    height: 150px; 
+    background:black;
+    border-radius: 0 0 200px 200px; 
+    overflow: hidden;
+    position: absolute;
+    left:560px;
+    top:490px;
+    animation: swingAnimation 7s ease-in-out forwards;
+  }
+  
   footer {
     background-color: black;
     color: white;
@@ -733,18 +798,69 @@ footer h2 {
     position: absolute;
     top:5800px; 
     bottom: 0;
-    max-width: 1440px;
+    max-width: 1200px;
     height: 510px;
     border-radius: 10px 10px 0 0; 
   }
-
+  
+  .item2 {
+    text-align: left;
+    position: absolute;
+    left:960px; 
+    top:300px;
+  }
+  
+  .item3 {
+    text-align: left;
+    position: absolute;
+    left:60px; 
+    top:450px;
+  }
+  
+  .item4 {
+    text-align: left;
+    position: absolute;
+    left:970px; 
+    top:450px;
+  }
+  
+  .item5 {
+    text-align: left;
+    position: absolute;
+    left:990px; 
+    top:450px;
+  }
+  .item6 {
+    text-align: left;
+    position: absolute;
+    left:1010px; 
+    top:450px;
+  }
+  .item7 {
+    text-align: left;
+    position: absolute;
+    left:1030px; 
+    top:450px;
+  }
+  
+  .item8 {
+    text-align: left;
+    position: absolute;
+    left:560px; 
+    top:490px;
+    font-size: 0.7em;
+    color: darkgrey;
+  }
   .ellipse14 { width: 100px; 
     height: 100px; 
     border-radius: 50%;
     background: linear-gradient(135deg, #FFA500, #8B4513, #FFD700);  
     position: absolute;
-    left:1110px;
+    left:1080px;
     top:0px; 
     border-radius: 0 0 200px 200px; 
   }
+  /* ... (other mobile-specific styles) */
 }
+
+  

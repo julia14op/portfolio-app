@@ -111,8 +111,10 @@ const App = () => {
               <h2>TECHNICAL <br /> WRITER</h2>
             </section>
           </div>
+         
           <div>
             <section className="aside1">
+              
               <h1>BU<br />IL <br /> D.</h1>
             </section>
             <div className="ellipse3" id="ellipse"></div>
