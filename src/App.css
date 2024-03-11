@@ -1,38 +1,739 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+header {
+  color: rgb(86, 86, 86);
+  padding: 10px;
+  position: absolute;
+  left:750px;
+  top:370px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.name-container0 {
+  position: absolute;
+  top:60px;
+  left:600px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 6em;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.name-container1 {
+  position: absolute;
+  top:180px;
+  left:650px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 6em;
+  font-weight: bold;
+}
+.name-container2 {
+  position: absolute;
+  left:500px;
+  top:300px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 6em;
+  font-weight: bold;
+}
+.letter {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+#letter-I1 { animation-delay: 0.1s; }
+#letter-D { animation-delay: 0.2s; }
+#letter-O1 { animation-delay: 0.3s; }
+#letter-W { animation-delay: 0.4s; }
+#letter-U1 { animation-delay: 0.5s; }
+#letter-O { animation-delay: 1.1s; }
+#letter-P { animation-delay: 1.2s; }
+#letter-E { animation-delay: 1.3s; }
+#letter-Y { animation-delay: 1.4s; }
+#letter-E2 { animation-delay: 1.5s; }
+#letter-M { animation-delay: 1.6s; }
+#letter-I { animation-delay: 1.7s; }
+#letter-J { animation-delay: 0.6s; }
+#letter-U { animation-delay: 0.7s; }
+#letter-L { animation-delay: 0.8s; }
+#letter-I2 { animation-delay: 0.9s; }
+#letter-A { animation-delay: 1.0s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.pic1 {
+  position: relative;
+  top:-40px;
+  left:0px;
+  height: 400px;
+  width: 400px;
 }
 
-.App-link {
-  color: #61dafb;
+.ellipse1 {
+  width: 100px; 
+  height: 100px; 
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFA500, #8B4513, #FFD700); 
+  position: absolute;
+  left:550px;
+  top:700px;
+}
+.ellipse2 {
+  width: 30px; 
+  height: 30px; 
+  border-radius: 50%;
+  background-color: white; 
+  position: absolute;
+  left:585px;
+  top:735px;
 }
 
-@keyframes App-logo-spin {
-  from {
+
+
+.half-circle2 {
+  width: 200px; /* Adjust the width as needed */
+  height: 200px; /* Adjust the height as needed (half of the width) */
+  background-color: white; 
+  border-radius: 50%; 
+  position: absolute;
+  left:660px;
+  top:410px; 
+}
+.half-circle1 {
+  width: 400px; /* Adjust the width as needed */
+  height: 200px; 
+  background:black;
+  border-radius: 0 0 200px 200px; 
+  overflow: hidden;
+  position: absolute;
+  left:560px;
+  top:490px;
+  animation: swingAnimation 7s ease-in-out forwards;
+}
+@keyframes swingAnimation {
+  0% {
     transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: rotate(15deg); /* Adjust the swing angle as needed */
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.aside{
+  position: absolute;
+  left:60px;
+  top:890px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.aside h2{
+  font-size:2.5em
+}
+
+
+.card-container {
+  perspective: 1000px;
+}
+
+.card {
+  position: relative;
+  width: 400px; /* Adjust the width as needed */
+  height: 400px; /* Adjust the height as needed */
+  position: absolute;
+  left:430px;
+  top:1150px;
+}
+
+.front-content{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.front-content {
+  background-color: black;
+  color: white;
+  font-size: 2.0em;
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.aside1{
+  position: absolute;
+  left:560px;
+  top:1800px;
+  font-size: 4em;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.ellipse3 {
+  width: 100px; 
+  height: 100px; 
+  border-radius: 50%;
+  background-color: rgba(241, 241, 7, 0.953); 
+  position: absolute;
+  left:260px;
+  top:1900px;
+}
+.ellipse4 {
+  width: 50px; 
+  height: 50px; 
+  border-radius: 50%;
+  background-color: black; 
+  position: absolute;
+  left:260px;
+  top:2000px;
+  animation: bounceAnimation 2s ease-in-out infinite;
+}
+@keyframes bounceAnimation {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(40px); 
+  }
+  60% {
+    transform: translateY(10px); 
+  }
+}
+
+.services {
+  width: 800px; 
+  margin: 0 auto;
+  padding: 20px;
+  background-color: black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  color:white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: absolute;
+  left:200px;
+  top:2400px;
+}
+
+.services h1{
+  font-size: 3.0em;
+  text-align:left;
+}
+
+.services h2{
+  font-size: 0.9em;
+  text-align:left;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.grid-item {
+  background-color: black; 
+  color: white;
+  padding: 10px;
+  text-align: left;
+  border-radius: 5px;
+}
+.ellipse5 {
+  
+  width: 100px; 
+  height: 100px; 
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFA500, #8B4513, #FFD700);  
+  position: absolute;
+  left:715px;
+  top:0px; 
+  border-radius: 0 0 200px 200px;
+}
+
+.article{
+  position: absolute;
+  left:60px;
+  top:3400px;
+  font-size: 2.0em;
+}
+.card1{
+  position: absolute;
+  width: 150px; 
+  height: 200px; 
+  left:580px;
+  top:50px;
+  background-color: white;
+  color:black;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card1 h2{
+  font-size: 0.7em;
+}
+.card1 h3{
+  font-size: 0.5em;
+}
+.card1 li{
+  font-size: 0.4em;
+}
+.card2{
+  position: absolute;
+  width: 150px; 
+  height: 200px; 
+  left:810px;
+  top:50px;
+  background-color: orange;
+  color:black;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card2 h2{
+  font-size: 0.7em;
+}
+.card2 h3{
+  font-size: 0.5em;
+}
+.card2 li{
+  font-size: 0.4em;
+}
+
+.card3{
+  position: absolute;
+  width: 150px; 
+  height: 200px; 
+  left:350px;
+  top:310px;
+  background-color: yellow;
+  color:black;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card3 h2{
+  font-size: 0.7em;
+}
+.card3 h3{
+  font-size: 0.5em;
+}
+.card3 li{
+  font-size: 0.4em;
+}
+
+
+.card4{
+  position: absolute;
+  width: 150px; 
+  height: 200px; 
+  left:570px;
+  top:310px;
+  background-color: black;
+  color:white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card4 h2{
+  font-size: 0.7em;
+}
+.card4 h3{
+  font-size: 0.5em;
+}
+.card4 li{
+  font-size: 0.4em;
+  text-align: left;
+  justify-items: left;
+}
+
+
+.projects{
+  position: absolute;
+  left:60px;
+  top:4200px; 
+  background-color: white;
+  width: 700px; 
+  height: 700px; 
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.247);
+}
+
+
+.projects h2{
+  text-align: center;
+  font-size: 4.3em;
+  position: absolute;
+  color:black;
+  left:65px;
+  top:20px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.my-work{
+  text-align: left;
+  font-size: 2.0em;
+  position: absolute;
+  left:65px;
+  top:230px;
+}
+
+.my-work a{
+  color:black;
+  font-family:'Courier New', Courier, monospace;
+}
+.my-work li{
+  color:black;
+}
+
+.half-circle3 {
+  width: 100px; 
+  height: 100px; 
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFA500, #8B4513, #FFD700);  
+  position: absolute;
+  left:520px;
+  top:-230px; 
+  border-radius: 0 0 200px 200px;
+}
+
+
+
+
+.arts{
+  position: absolute;
+  left:630px;
+  top:5000px; 
+  font-size: 5em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+.ellipse12 {
+  width: 100px; 
+  height: 100px; 
+  border-radius: 50%;
+  background-color: orange; 
+  position: absolute;
+  left:-400px;
+  top:400px; 
+  animation: bounceAnimation 7s ease-in-out infinite;
+}
+.ellipse13 {
+  width: 70px; 
+  height: 70px; 
+  border-radius: 50%;
+  background-color: black; 
+  position: absolute;
+  left:-400px;
+  top:350px; 
+  animation: bounceAnimation 7s ease-in-out infinite;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  position: absolute;
+  top:5800px; 
+  bottom: 0;
+  width: 1196px;
+  height: 510px;
+  border-radius: 10px 10px 0 0; 
+}
+footer h2 {
+  font-size: 3.2em;
+  position: absolute;
+  left:60px;
+}
+
+
+
+.item1 {
+  text-align: left;
+  position: absolute;
+  left:60px; 
+  top:300px;
+}
+
+.item1 {
+  text-align: left;
+  position: absolute;
+  left:60px; 
+  top:300px;
+}
+
+.item2 {
+  text-align: left;
+  position: absolute;
+  left:960px; 
+  top:300px;
+}
+
+.item3 {
+  text-align: left;
+  position: absolute;
+  left:60px; 
+  top:450px;
+}
+
+.item4 {
+  text-align: left;
+  position: absolute;
+  left:970px; 
+  top:450px;
+}
+
+.item5 {
+  text-align: left;
+  position: absolute;
+  left:990px; 
+  top:450px;
+}
+.item6 {
+  text-align: left;
+  position: absolute;
+  left:1010px; 
+  top:450px;
+}
+.item7 {
+  text-align: left;
+  position: absolute;
+  left:1030px; 
+  top:450px;
+}
+
+.item8 {
+  text-align: left;
+  position: absolute;
+  left:560px; 
+  top:490px;
+  font-size: 0.7em;
+  color: darkgrey;
+}
+.ellipse14 { width: 100px; 
+  height: 100px; 
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFA500, #8B4513, #FFD700);  
+  position: absolute;
+  left:1080px;
+  top:0px; 
+  border-radius: 0 0 200px 200px; 
+}
+
+@media only screen and (max-width: 320px) {
+  /* Apply styles for screens up to 600 pixels wide (adjust as needed) */
+
+  header {
+    font-size: 14px;
+  }
+
+  .name-container0,
+  .name-container1,
+  .name-container2 {
+   
+  display: grid;
+  grid-template-columns: repeat(7,1fr) ;
+    margin-bottom:20px;
+  }
+  
+  .ellipse1 {
+    width: 80px; 
+    height: 80px; 
+    border-radius: 50%;
+    background: linear-gradient(135deg, #FFA500, #8B4513, #FFD700); 
+    position: absolute;
+    left:550px;
+    top:700px;
+  }
+  .ellipse2 {
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50%;
+    background-color: white; 
+    position: absolute;
+    left:575px;
+    top:725px;
+  }
+  
+  
+  
+  .half-circle2 {
+    width: 150px; /* Adjust the width as needed */
+    height: 150px; /* Adjust the height as needed (half of the width) */
+    background-color: white; 
+    border-radius: 50%; 
+    position: absolute;
+    left:625px;
+    top:410px; 
+  }
+  .half-circle1 {
+    width: 300px; /* Adjust the width as needed */
+    height: 150px; 
+    background:black;
+    border-radius: 0 0 200px 200px; 
+    overflow: hidden;
+    position: absolute;
+    left:560px;
+    top:490px;
+    animation: swingAnimation 7s ease-in-out forwards;
+  }
+  
+  
+  .item2 {
+    text-align: left;
+    position: absolute;
+    left:760px; 
+    top:300px;
+  }
+  
+  .item3 {
+    text-align: left;
+    position: absolute;
+    left:60px; 
+    top:450px;
+  }
+  
+  .item4 {
+    text-align: left;
+    position: absolute;
+    left:970px; 
+    top:450px;
+  }
+  
+  .item5 {
+    text-align: left;
+    position: absolute;
+    left:990px; 
+    top:450px;
+  }
+  .item6 {
+    text-align: left;
+    position: absolute;
+    left:1010px; 
+    top:450px;
+  }
+  .item7 {
+    text-align: left;
+    position: absolute;
+    left:1030px; 
+    top:450px;
+  }
+  
+  .item8 {
+    text-align: left;
+    position: absolute;
+    left:560px; 
+    top:490px;
+    font-size: 0.7em;
+    color: darkgrey;
+  }
+  .ellipse14 { width: 100px; 
+    height: 100px; 
+    border-radius: 50%;
+    background: linear-gradient(135deg, #FFA500, #8B4513, #FFD700);  
+    position: absolute;
+    left:0px;
+    top:0px; 
+    border-radius: 0 0 200px 200px; 
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* Apply styles for screens up to 600 pixels wide (adjust as needed) */
+
+  header {
+    font-size: 14px;
+  }
+
+  .name-container0,
+  .name-container1,
+  .name-container2 {
+   
+  display: grid;
+  grid-template-columns: repeat(7,1fr) ;
+    margin-bottom:20px;
+  }
+  .ellipse1 {
+    width: 80px; 
+    height: 80px; 
+    border-radius: 50%;
+    background: linear-gradient(135deg, #FFA500, #8B4513, #FFD700); 
+    position: absolute;
+    left:550px;
+    top:700px;
+  }
+  .ellipse2 {
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50%;
+    background-color: white; 
+    position: absolute;
+    left:575px;
+    top:725px;
+  }
+  
+  
+  
+  .half-circle2 {
+    width: 150px; /* Adjust the width as needed */
+    height: 150px; /* Adjust the height as needed (half of the width) */
+    background-color: white; 
+    border-radius: 50%; 
+    position: absolute;
+    left:640px;
+    top:410px; 
+  }
+  .half-circle1 {
+    width: 300px; /* Adjust the width as needed */
+    height: 150px; 
+    background:black;
+    border-radius: 0 0 200px 200px; 
+    overflow: hidden;
+    position: absolute;
+    left:560px;
+    top:490px;
+    animation: swingAnimation 7s ease-in-out forwards;
+  }
+  
+  /* ... (other mobile-specific styles) */
+}
+
+@media only screen and (max-width: 1440px) {
+  footer {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    position: absolute;
+    top:5800px; 
+    bottom: 0;
+    width: 1440px;
+    height: 510px;
+    border-radius: 10px 10px 0 0; 
+  }
+
+  .ellipse14 { width: 100px; 
+    height: 100px; 
+    border-radius: 50%;
+    background: linear-gradient(135deg, #FFA500, #8B4513, #FFD700);  
+    position: absolute;
+    left:1110px;
+    top:0px; 
+    border-radius: 0 0 200px 200px; 
   }
 }
