@@ -1,7 +1,8 @@
 
 
 body {
-  margin: 0;
+  margin:0; padding:0;
+  box-sizing: border-box;
   font-family: 'Arial', sans-serif;
 }
 header {
@@ -100,8 +101,8 @@ header {
 
 
 .half-circle2 {
-  width: 200px; /* Adjust the width as needed */
-  height: 200px; /* Adjust the height as needed (half of the width) */
+  width: 200px; 
+  height: 200px; 
   background-color: white; 
   border-radius: 50%; 
   position: absolute;
@@ -109,7 +110,7 @@ header {
   top:410px; 
 }
 .half-circle1 {
-  width: 400px; /* Adjust the width as needed */
+  width: 400px; 
   height: 200px; 
   background:black;
   border-radius: 0 0 200px 200px; 
@@ -124,7 +125,7 @@ header {
     transform: rotate(0deg);
   }
   50% {
-    transform: rotate(15deg); /* Adjust the swing angle as needed */
+    transform: rotate(15deg); 
   }
   100% {
     transform: rotate(0deg);
@@ -148,8 +149,8 @@ header {
 
 .card {
   position: relative;
-  width: 400px; /* Adjust the width as needed */
-  height: 400px; /* Adjust the height as needed */
+  width: 400px; 
+  height: 400px; 
   position: absolute;
   left:430px;
   top:1150px;
@@ -539,7 +540,6 @@ footer h2 {
 }
 
 @media only screen and (min-width: 320px) {
-  /* Apply styles for screens up to 600 pixels wide (adjust as needed) */
 
   header {
     font-size: 14px;
@@ -576,8 +576,8 @@ footer h2 {
   
   
   .half-circle2 {
-    width: 150px; /* Adjust the width as needed */
-    height: 150px; /* Adjust the height as needed (half of the width) */
+    width: 150px; 
+    height: 150px; 
     background-color: white; 
     border-radius: 50%; 
     position: absolute;
@@ -585,7 +585,7 @@ footer h2 {
     top:410px; 
   }
   .half-circle1 {
-    width: 300px; /* Adjust the width as needed */
+    width: 300px; 
     height: 150px; 
     background:black;
     border-radius: 0 0 200px 200px; 
@@ -668,7 +668,6 @@ footer h2 {
 }
 
 @media only screen and (max-width: 768px) {
-  /* Apply styles for screens up to 600 pixels wide (adjust as needed) */
 
   header {
     font-size: 14px;
@@ -704,8 +703,8 @@ footer h2 {
   
   
   .half-circle2 {
-    width: 150px; /* Adjust the width as needed */
-    height: 150px; /* Adjust the height as needed (half of the width) */
+    width: 150px; 
+    height: 150px; 
     background-color: white; 
     border-radius: 50%; 
     position: absolute;
@@ -713,7 +712,7 @@ footer h2 {
     top:410px; 
   }
   .half-circle1 {
-    width: 300px; /* Adjust the width as needed */
+    width: 300px; 
     height: 150px; 
     background:black;
     border-radius: 0 0 200px 200px; 
@@ -724,12 +723,10 @@ footer h2 {
     animation: swingAnimation 7s ease-in-out forwards;
   }
   
-  /* ... (other mobile-specific styles) */
 }
 
   
 @media only screen and (max-width: 1024px) {
-  /* Apply styles for screens up to 600 pixels wide (adjust as needed) */
 
   header {
     font-size: 14px;
@@ -771,8 +768,8 @@ footer h2 {
   
   
   .half-circle2 {
-    width: 150px; /* Adjust the width as needed */
-    height: 150px; /* Adjust the height as needed (half of the width) */
+    width: 150px; 
+    height: 150px; 
     background-color: white; 
     border-radius: 50%; 
     position: absolute;
@@ -780,7 +777,7 @@ footer h2 {
     top:410px; 
   }
   .half-circle1 {
-    width: 300px; /* Adjust the width as needed */
+    width: 300px; 
     height: 150px; 
     background:black;
     border-radius: 0 0 200px 200px; 
@@ -860,7 +857,90 @@ footer h2 {
     top:0px; 
     border-radius: 0 0 200px 200px; 
   }
-  /* ... (other mobile-specific styles) */
+}
+
+  
+
+@media only screen and (max-width: 1440px) {
+
+  header {
+    font-size: 14px;
+  }
+
+  .name-container0,
+  .name-container1,
+  .name-container2 {
+   
+  display: grid;
+  grid-template-columns: repeat(13,1fr) ;
+    margin-bottom:20px;
+  }
+  .name-container1 {
+    position: absolute;
+    top:180px;
+    left:610px;
+  }
+
+  .ellipse1 {
+    width: 80px; 
+    height: 80px; 
+    border-radius: 50%;
+    background: linear-gradient(135deg, #FFA500, #8B4513, #FFD700); 
+    position: absolute;
+    left:550px;
+    top:700px;
+  }
+  .ellipse2 {
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50%;
+    background-color: white; 
+    position: absolute;
+    left:575px;
+    top:725px;
+  }
+  
+  
+  
+  .half-circle2 {
+    width: 200px; 
+    height: 200px; 
+    background-color: white; 
+    border-radius: 50%; 
+    position: absolute;
+    left:660px;
+    top:405px; 
+  }
+  .half-circle1 {
+    width: 400px; 
+    height: 200px; 
+    background:black;
+    border-radius: 0 0 200px 200px; 
+    overflow: hidden;
+    position: absolute;
+    left:560px;
+    top:490px;
+    animation: swingAnimation 7s ease-in-out forwards;
+  }
+  
+  footer {
+    max-width: 1400px; 
+  }
+  
+  .item2{
+    position: absolute;
+    left:960px;
+  }
+  
+  .ellipse14 { width: 100px; 
+    height: 100px; 
+    border-radius: 50%;
+    background: linear-gradient(135deg, #FFA500, #8B4513, #FFD700);  
+    position: absolute;
+    left:1080px;
+    top:0px; 
+    border-radius: 0 0 200px 200px; 
+  }
 }
 
   
