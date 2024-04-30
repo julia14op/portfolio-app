@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import pic1 from '../src/pic1.png';
 import pic4 from '../src/pic4.png';
@@ -28,11 +28,11 @@ const App = () => {
   const handleMouseEnter = (index) => {
     setHoveredProject(index);
   };
-  
+
   const handleMouseLeave = () => {
     setHoveredProject(null);
   };
-  
+
   const generateProjectListItem = (project, index) => (
     <li
       key={index}
@@ -54,7 +54,26 @@ const App = () => {
     { name: 'Calculator App', link: 'https://calculator-app-julia14op.vercel.app/', tinyImage: pic8 },
     { name: 'Responsive Navbar', link: 'https://responsive-nav-bar-jet.vercel.app/', tinyImage: pic9 },
     { name: 'Task Manager', link: 'https://task-manager-app-jade-chi.vercel.app/', tinyImage: pic10 },
-    { name: 'Managata & Gallo', link: 'https://mangata-gallo-hazel.vercel.app/', tinyImage: pic11 }
+    { name: 'Managata & Gallo', link: 'https://mangata-gallo-hazel.vercel.app/', tinyImage: pic11 },
+    { name: 'Advanced React Table', link: 'https://advanced-data-table-lac.vercel.app/' },
+    { name: 'React Dashboard', link: 'https://react-dashboard-idowu-opeyemi-julia.vercel.app/' }
+  ];
+
+  const generateArticlesListItem = (article) => (
+    <li>
+      <a href={article.link}>{article.name}</a>
+    </li>
+  );
+  const articles = [
+    { name: 'Installing Postman Extension on Visual Studio Code (VSCode)', link: 'https://dev.to/synthscript/installing-postman-extension-on-visual-studio-code-vscode-29k2' },
+    { name: 'Optimizing Web Design through Advanced Techniques in CSS: Colours and Backgrounds', link: 'https://dev.to/synthscript/optimizing-web-design-through-advanced-techniques-in-css-colours-and-backgrounds-4ja8' },
+    { name: 'The Arts of Technical Writing: Tips and Techniques for Clear Communication', link: 'https://dev.to/synthscript/the-arts-of-technical-writing-tips-and-techniques-for-clear-communication-3im7' },
+    { name: ' Disruption and Transformation: The Impact of Online Food Delivery Services on Restaurant Sales', link: 'https://dev.to/synthscript/disruption-and-transformation-the-impact-of-online-food-delivery-services-on-restaurant-sales-35o6' },
+    { name: 'aptLearn: YOUR PATH TO TECHNICAL SUCCESS', link: 'https://dev.to/synthscript/aptlearn-your-path-to-technical-success-1k8i' },
+
+
+
+
   ];
 
   return (
@@ -77,8 +96,7 @@ const App = () => {
         <div className="letter" id="letter-I">I </div>
       </div>
       <div className="name-container1">
-        <div className="letter" id="letter-J"> </div>
-        <div className="letter" id="letter-J"> J</div>
+        <div className="letter" id="letter-J">J</div>
         <div className="letter" id="letter-U">U</div>
         <div className="letter" id="letter-L">L</div>
         <div className="letter" id="letter-I2">I</div>
@@ -87,7 +105,7 @@ const App = () => {
       <header>
         <p>PORTFOLIO</p>
       </header>
-      <div className="pic1">
+      <div className="pic-h">
         <img src={pic1} alt="julia's pic" />
       </div>
 
@@ -106,15 +124,23 @@ const App = () => {
           </section>
           <div className="card">
             <section className="front-content">
-              <h2>FRONT <br />END <br /> DEVELOPER </h2>
-              <hr />
-              <h2>TECHNICAL <br /> WRITER</h2>
+              <h2>About </h2>
+
+              <p>I am a motivated technical writer and web developer, <br />
+                proficient in HTML, CSS, JavaScript, and React with a passion for educating readers, <br />
+                creating visually appealing and user-friendly websites. <br />
+                I am committed to impacting knowledge, transforming design concepts<br />
+                into interactive and responsive interfaces. <br />
+                I am open to internship opportunities and full time role as a Frontend developer and Technical writer.
+              </p>
             </section>
           </div>
-         
+
+
+
           <div>
             <section className="aside1">
-              
+
               <h1>BU<br />IL <br /> D.</h1>
             </section>
             <div className="ellipse3" id="ellipse"></div>
@@ -211,22 +237,31 @@ const App = () => {
             </div>
           </section>
 
-          <section className='projects'>
+          <div className='projects'>
             <div className="ellipse7" id="ellipse"></div>
             <div className="ellipse8" id="ellipse"></div>
             <h2>My Projects</h2>
             <div className='my-work'>
-      <ul>
-        {projects.map((project, index) => generateProjectListItem(project, index))}
-      </ul>
+              <ul>
+                {projects.map((project, index) => generateProjectListItem(project, index))}
+              </ul>
               <div className="ellipse9" id="ellipse"></div>
-              <div className="ellipse10" id="ellipse"></div>
               <div className="half-circle3" id="ellipse"></div>
+              <div className="ellipse10" id="ellipse"></div>
               <div className="ellipse11" id="ellipse"></div>
 
             </div>
 
-          </section>
+            <div className='article2'>
+              <h2>Articles</h2>
+              <div className='articles'>
+                <ul>
+                  {articles.map((article) => generateArticlesListItem(article))}
+                </ul>
+              </div>
+            </div>
+
+          </div>
 
           <section className="arts">
             <h2>GET <br /> IN <br /> TOUCH.</h2>
@@ -237,14 +272,14 @@ const App = () => {
 
 
         <footer>
-        <div className="ellipse14" id="ellipse"></div>
-            <div className="ellipse15" id="ellipse"></div>
+          <div className="ellipse14" id="ellipse"></div>
+          <div className="ellipse15" id="ellipse"></div>
           <h2>Don't Build Mere Links.<br /> Build <br /> With JULIA.</h2>
 
           <div className='item1'>
             <h3>Address</h3>
             <p>
-            Olalekan Adigun Estate,<br /> Bodija, Ibadan.
+              Olalekan Adigun Estate,<br /> Bodija, Ibadan.
             </p>
           </div>
 
@@ -258,31 +293,31 @@ const App = () => {
             <p>09034957604</p>
           </div>
           <div className='item4'>
-        <a href="https://github.com/julia14op" target="_blank" rel="noopener noreferrer">
-          <FaGithub />
-        </a>
-      </div>
+            <a href="https://github.com/julia14op" target="_blank" rel="noopener noreferrer">
+              <FaGithub />
+            </a>
+          </div>
 
           <div className='item5'>
-        <a href="https://www.linkedin.com/in/opeyemi-julia-idowu-a48027238" target="_blank" rel="noopener noreferrer">
-          <FaLinkedin />
-        </a>
-      </div>
-      <div className='item6'>
-        <a href="https://medium.com/@opeyemiidowu" target="_blank" rel="noopener noreferrer">
-          <FaMedium />
-        </a>
-      </div> 
+            <a href="https://www.linkedin.com/in/opeyemi-julia-idowu-a48027238" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin />
+            </a>
+          </div>
+          <div className='item6'>
+            <a href="https://medium.com/@opeyemiidowu" target="_blank" rel="noopener noreferrer">
+              <FaMedium />
+            </a>
+          </div>
 
-      <div className='item7'>
-        <a href="https://dev.to/synthscript" target="_blank" rel="noopener noreferrer">
-          <FaDev />
-        </a>
-      </div>
-      <div className='item8'>
-      <p>&copy;SynthScript 2024 </p>
-      </div>
-      
+          <div className='item7'>
+            <a href="https://dev.to/synthscript" target="_blank" rel="noopener noreferrer">
+              <FaDev />
+            </a>
+          </div>
+          <div className='item8'>
+            <p>&copy;SynthScript 2024 </p>
+          </div>
+
         </footer>
       </div>
     </div>
